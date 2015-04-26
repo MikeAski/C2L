@@ -2,15 +2,19 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'sbr-owse',
+    modulePrefix: 'sbrowse',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
+    },
+
+    contentSecurityPolicy: {
+      'default-src': "none wol.jw.org"
     },
 
     APP: {

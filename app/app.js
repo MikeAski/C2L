@@ -3,14 +3,23 @@ import Resolver from 'ember/resolver';
 import loadInitializers from 'ember/load-initializers';
 import config from './config/environment';
 
-var App;
-
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
-App = Ember.Application.extend({
+var App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver: Resolver
+  Resolver: Resolver,
+
+  ready: function () {
+    var doc = Ember.$(document);
+
+    var elts = doc.find('*');
+
+    alert('ELs:', elts.length);
+    elts.toArray().forEach(function (el) {
+      alert('EL: #' + el.toString());
+    });
+  }
 });
 
 loadInitializers(App, config.modulePrefix);

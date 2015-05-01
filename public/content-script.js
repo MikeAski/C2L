@@ -57,6 +57,7 @@ var progress = Ember.Object.extend({
         '<div class="c2l-label" style="padding: 5px 10px;">Cyrillic to Latin processing...</div>' +
       '</div>'
     );
+    el.hide();
     el.appendTo('body');
     this.set('el', el);
   },

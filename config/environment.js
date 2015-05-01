@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'sbrowse',
+    modulePrefix: 'c2l',
     environment: environment,
     baseURL: '/',
     locationType: 'hash',
@@ -13,9 +13,9 @@ module.exports = function(environment) {
       }
     },
 
-    contentSecurityPolicy: {
-      'default-src': "none wol.jw.org"
-    },
+    // contentSecurityPolicy: {
+    //   'default-src': "none"
+    // },
 
     APP: {
       // Here you can pass flags/options to your application instance

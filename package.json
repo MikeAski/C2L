@@ -1,7 +1,7 @@
 {
-  "name": "sbrowse",
+  "name": "c2l",
   "version": "0.0.1",
-  "description": "On the fly cyrillic transcoding",
+  "description": "On the fly Cyrillic to Latin transcoding",
   "private": true,
   "directories": {
     "doc": "doc",

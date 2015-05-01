@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+
+  "name": "C2L",
+  "description": "Cyrilic to Latin characters transcoding",
+  "version": "1.0.0",
+  "icons": {
+    "128": "chrome-icon-lg.png"
+  },
+
+  "web_accessible_resources": [
+    "assets/vendor.map"
+  ],
+
+  "browser_action": {
+    "default_icon": "chrome-icon.png",
+    "default_popup": "index.html",
+    "default_title": "C2L"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": [
+      "assets/vendor.js",
+      "content-script.js"
+    ],
+    "run_at": "document_end",
+    "all_frames": true
+  }],
+  "permissions": [
+    "storage",
+    "tabs",
+    "bookmarks",
+    "activeTab",
+    "<all_urls>",
+    "https://ajax.googleapis.com/"
+  ]
+}

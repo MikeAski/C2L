@@ -11,14 +11,7 @@ var App = Ember.Application.extend({
   Resolver: Resolver,
 
   ready: function () {
-    var doc = Ember.$(document);
-
-    var elts = doc.find('*');
-
-    alert('ELs:', elts.length);
-    elts.toArray().forEach(function (el) {
-      alert('EL: #' + el.toString());
-    });
+    console.log('READY');
   }
 });
 
